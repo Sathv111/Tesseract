@@ -123,7 +123,8 @@ def bookings():
 
 @app.route("/edit/<string:pid>",methods=['POST','GET'])
 @login_required
-def edit(pid):    
+def edit(pid):
+    doct=Doctors.query.all()
     if request.method=="POST":
         email=request.form.get('email')
         name=request.form.get('name')
@@ -151,7 +152,7 @@ def edit(pid):
         return redirect('/bookings')
         
     posts=Patients.query.filter_by(pid=pid).first()
-    return render_template('edit.html',posts=posts)
+    return render_template('edit.html',posts=posts,doct=doct)
 
 
 @app.route("/delete/<string:pid>",methods=['POST','GET'])
