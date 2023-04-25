@@ -22,7 +22,7 @@
 label {
     color: white;
     margin-top: 15px;
-    font-family: 'Itim', cursive;
+    
 }
 
 .jumbotron {
@@ -50,7 +50,7 @@ label {
     outline: none;
     font-size: 22px;
     margin-bottom: 5px;
-    font-family: 'Itim', cursive;
+    
 }
 
 option {
